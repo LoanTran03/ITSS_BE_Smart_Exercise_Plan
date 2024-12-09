@@ -1,0 +1,19 @@
+extends layout
+
+block content
+  form(method='POST')
+    label(for='email')
+      b Email
+    input#email(type='email', placeholder='Email không quá 64 kí tự và phải có kí tự @', name='email', required='required')
+    label(for='psw')
+      b Mật khẩu
+    input#psw(type='password', placeholder='Mật khẩu ít nhất 8 kí tự, ít nhất 1 chữ hoa, 1 chữ thường và 1 chữ số', name='psw', required='required')
+    label(for='pswrepeat')
+      b Xác nhận mật khẩu
+    input#pswrepeat(type='password', placeholder='', name='pswrepeat', required='required')
+    label(for='fname')
+      b Tên tài khoản
+    input#username(type='text', placeholder='', name='username', required='required')
+    button(type='submit') Đăng kí
+    p Đã có tài khoản? 
+      a(href='/login') Đăng nhập
